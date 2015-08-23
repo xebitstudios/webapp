@@ -1,3 +1,4 @@
+// this is the seeder function file that sseds the DB if no data exists
 var mongoose = require('mongoose'),
     models = require('./models'),
     md5 = require('MD5');
@@ -44,7 +45,7 @@ module.exports = {
                     phone: '215-123-1234',
                     gravatar: md5('nancy@testerson.com')
                 });
-                
+
                 newContact.save(function(err, contact) {
                     console.log('successfully inserted contact: ' + contact._id);
                 });
